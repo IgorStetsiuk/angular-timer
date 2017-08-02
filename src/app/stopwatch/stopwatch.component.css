@@ -1,0 +1,45 @@
+.container {
+    width: 500px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.btn-group button {
+    width: 33%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #bdc3c7;
+    border-left-width: 0;
+    padding: 0.25em 1.25em;
+    outline: 0;
+    margin: 10px;
+}
+
+.btn-group__green {
+    background: green;
+}
+
+.btn-group__yellow {
+    background: yellow;
+}
+
+.laps {
+    padding: 10px;
+}
+
+.lap {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.btn {
+    background: #3c5cf7;;
+}

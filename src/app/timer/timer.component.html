@@ -1,0 +1,5 @@
+<h1>Timer {{formatTime(getCurrentTime())}}</h1>
+<p>Enter time (minutes)</p>
+<input type="text" [(ngModel)]="userTime"/>
+<button (click)="startCount()">Start</button>
+<button (click)="resetTimer()">Reset</button>

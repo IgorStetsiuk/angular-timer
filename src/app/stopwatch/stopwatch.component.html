@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>{{ formatTime(time) }}</h1>
+  <div class="btn-group">
+    <button (click)="toggle()" [ngClass]="{ 'btn-group__green': !started, 'btn-group__yellow': started }"> Start
+    </button>
+    <button class="btn" (click)="lap()">Lap</button>
+    <button  class="btn" (click)="reset()">Reset</button>
+  </div>
+  <div class="laps" *ngIf="stopwatchService.laps.length > 1">
+    <div class="lap" *ngFor="let lapItem of stopwatchService.laps; index as i;last as lastEl;">
+      <div>Lap {{ i }}</div>
+      <span *ngIf="lapItem.startMs!==0">previous :</span><span>{{formatTime(lapItem.startMs) }}</span>
+      <span>current :</span><span *ngIf="lastEl">{{formatTime(time) }}</span>
+      <div *ngIf="!lastEl">{{ formatTime(lapItem.endMs) }}</div>
+    </div>
+  </div>
+
+</div>
